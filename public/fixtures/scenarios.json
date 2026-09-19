@@ -1,0 +1,46 @@
+{
+  "scenarios": [
+    {
+      "id": "BB-CLEAN-001",
+      "title": "Clean pass — all critical facts match CRM",
+      "expect": "SUBMITTED (first-pass)",
+      "agentId": "agent_clean",
+      "file": "transcript-BB-CLEAN-001.json"
+    },
+    {
+      "id": "BB-ALL-PASS-001",
+      "title": "All pass — no critical issues (email must NOT fire)",
+      "expect": "SUBMITTED — no auto email",
+      "agentId": "agent_allpass",
+      "file": "transcript-BB-ALL-PASS-001.json"
+    },
+    {
+      "id": "BB-MODEM-FAIL-001",
+      "title": "Modem mismatch — agent says PS forty vs CRM CF40",
+      "expect": "HELD (MODEM_MODEL critical FAIL)",
+      "agentId": "agent_modem",
+      "file": "transcript-BB-MODEM-FAIL-001.json"
+    },
+    {
+      "id": "BB-PRICE-FAIL-001",
+      "title": "Promo price mismatch — quotes $39.90 instead of $42.90",
+      "expect": "HELD (PLAN_PROMO_PRICE critical FAIL)",
+      "agentId": "agent_price",
+      "file": "transcript-BB-PRICE-FAIL-001.json"
+    },
+    {
+      "id": "BB-NO-DISCLAIMER-001",
+      "title": "Missing recording disclaimer",
+      "expect": "HELD (RECORDING_DISCLAIMER critical FAIL)",
+      "agentId": "agent_nodisc",
+      "file": "transcript-BB-NO-DISCLAIMER-001.json"
+    },
+    {
+      "id": "BB-DELIVERY-NOTE-001",
+      "title": "Facts OK + heavy delivery-address confusion (Type C NOTE)",
+      "expect": "SUBMITTED with DELIVERY_CONFUSION NOTE",
+      "agentId": "agent_delivery",
+      "file": "transcript-BB-DELIVERY-NOTE-001.json"
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "source": "CIMET_REDACTED_PDF_VARIANT",
+  "scenario": "BB-PRICE-FAIL-001",
+  "title": "Promo price mismatch — quotes $39.90 instead of $42.90",
+  "expectGate": "HELD (PLAN_PROMO_PRICE critical FAIL)",
+  "note": "Synthetic timestamps for demo; redaction placeholders preserved from CIMET PDF constraints.",
+  "externalLeadId": "BB-PRICE-FAIL-001",
+  "utterances": [
+    {
+      "speaker": "customer",
+      "text": "Hello. [CUSTOMER_NAME] speaking.",
+      "startMs": 0,
+      "endMs": 2500
+    },
+    {
+      "speaker": "agent",
+      "text": "Yes. Hi, Alex. Good day. This is Sam from Internet's comparison. How are you?",
+      "startMs": 7000,
+      "endMs": 10080
+    },
+    {
+      "speaker": "customer",
+      "text": "Good. Thanks. How are you?",
+      "startMs": 14580,
+      "endMs": 17080
+    },
+    {
+      "speaker": "agent",
+      "text": "Yeah. I'm good. Thank you. And we noticed that you're looking for better Internet plans, and we're calling to assist you with this. And as I check it, your address is [SERVICE_ADDRESS] Correct.",
+      "startMs": 21580,
+      "endMs": 29300
+    },
+    {
+      "speaker": "customer",
+      "text": "Yep. [SERVICE_ADDRESS].",
+      "startMs": 33800,
+      "endMs": 36300
+    },
+    {
+      "speaker": "agent",
+      "text": "By the way, please be advised that this call will be recorded for quality assurance and training purposes. K? Now let me double check the address. Bear with me. As I check it yeah. The address is already an NBN ready, fiber to the premises technology. Okay? Now just to ask, [CUSTOMER_NAME], who's your current Internet service provider?",
+      "startMs": 40800,
+      "endMs": 52800
+    },
+    {
+      "speaker": "customer",
+      "text": "IPRIMUS.",
+      "startMs": 57300,
+      "endMs": 59800
+    },
+    {
+      "speaker": "agent",
+      "text": "You are currently with iPRIMUS. How much are you paying?",
+      "startMs": 64300,
+      "endMs": 66800
+    },
+    {
+      "speaker": "customer",
+      "text": "They reduced it today to sixty five. That's all right here.",
+      "startMs": 71300,
+      "endMs": 73800
+    },
+    {
+      "speaker": "agent",
+      "text": "Sixty five dollars for how many MBPS? Do you know the speed?",
+      "startMs": 78300,
+      "endMs": 80800
+    },
+    {
+      "speaker": "customer",
+      "text": "Twenty five.",
+      "startMs": 85300,
+      "endMs": 87800
+    },
+    {
+      "speaker": "agent",
+      "text": "Twenty five Mbps? Okay. And how many people are using the Internet?",
+      "startMs": 92300,
+      "endMs": 94980
+    },
+    {
+      "speaker": "customer",
+      "text": "Just myself. I just watch Netflix and that sort of stuff, and I've seen my TV still at like channel seven channel nine. I stream that through the Internet.",
+      "startMs": 99480,
+      "endMs": 105680
+    },
+    {
+      "speaker": "agent",
+      "text": "And do you need the home phone line? Do you need a landline or no?",
+      "startMs": 110180,
+      "endMs": 112820
+    },
+    {
+      "speaker": "customer",
+      "text": "No.",
+      "startMs": 117320,
+      "endMs": 119820
+    },
+    {
+      "speaker": "agent",
+      "text": "Okay. Because I just want to tell you, I can give you a twenty five MBPS for only thirty nine dollars and ninety for the first six months.",
+      "startMs": 124320,
+      "endMs": 129840
+    },
+    {
+      "speaker": "customer",
+      "text": "Yep. And then what does it go up to?",
+      "startMs": 134340,
+      "endMs": 136840
+    },
+    {
+      "speaker": "agent",
+      "text": "Seventy two dollars and ninety. That's the regular price.",
+      "startMs": 141340,
+      "endMs": 143840
+    },
+    {
+      "speaker": "customer",
+      "text": "I might save myself twenty dollars a month for six months, but then it's then I have seven dollars a month here. Maybe I'll just stay where I am.",
+      "startMs": 148340,
+      "endMs": 154140
+    },
+    {
+      "speaker": "agent",
+      "text": "I really understand. I can also give you a free modem with that with no extra cost.",
+      "startMs": 158640,
+      "endMs": 161960
+    },
+    {
+      "speaker": "customer",
+      "text": "Who is that through?",
+      "startMs": 166460,
+      "endMs": 168960
+    },
+    {
+      "speaker": "agent",
+      "text": "That is from [PROVIDER_A].",
+      "startMs": 173460,
+      "endMs": 175960
+    },
+    {
+      "speaker": "customer",
+      "text": "Right. [PROVIDER_A]. So free modem. And thirty nine dollars a month. Dollars. Do I get a check for it?",
+      "startMs": 180460,
+      "endMs": 184540
+    },
+    {
+      "speaker": "agent",
+      "text": "No. All the NBN plans, they're using only one network, all the retailers. That's the NBN. But for the mobile SIM plan, kindly use it at Telstra network.",
+      "startMs": 189040,
+      "endMs": 195120
+    },
+    {
+      "speaker": "customer",
+      "text": "And would it be a new modem or a refurbished one?",
+      "startMs": 199620,
+      "endMs": 202120
+    },
+    {
+      "speaker": "agent",
+      "text": "So that's the brand new modem. It's all yours. It's hundred percent free. Even you switch provider, even you move to a different property, you can keep and use the same modem.",
+      "startMs": 206620,
+      "endMs": 213620
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay. So how does it how does it work? How does get changed over?",
+      "startMs": 218120,
+      "endMs": 220720
+    },
+    {
+      "speaker": "agent",
+      "text": "We can quickly set this up for you without paying any setup fee. It will be delivered to you within three to five business days.",
+      "startMs": 225220,
+      "endMs": 230340
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay. And is there a cost involved in having it delivered?",
+      "startMs": 234840,
+      "endMs": 237340
+    },
+    {
+      "speaker": "agent",
+      "text": "No. It's hundred percent. No extra cost.",
+      "startMs": 241840,
+      "endMs": 244340
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay. Alright. Yep. Sounds like a good deal.",
+      "startMs": 248840,
+      "endMs": 251340
+    },
+    {
+      "speaker": "agent",
+      "text": "This value plan from [PROVIDER_A] comes with a month to month contract only and provides twenty five Mbps typical in download speed and eight point five Mbps typical in the upload speed from seven PM to eleven PM. The original plan cost is seventy two dollars and ninety per month, but we have an offer where you will get this plan as thirty nine dollars and ninety only per month for the first six months and then seventy two dollars and ninety. The modem that you will receive is the Netcom CF forty Wi Fi six modem. Again, it's hundred percent free.",
+      "startMs": 255840,
+      "endMs": 267840
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay. So there's no setting up or anything like that. You just plug it in?",
+      "startMs": 272340,
+      "endMs": 275300
+    },
+    {
+      "speaker": "agent",
+      "text": "Because it's already preconfigured to [PROVIDER_A]. That's why you don't need to reconfigure it. And this will be under your name. Am I correct?",
+      "startMs": 279800,
+      "endMs": 285560
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes. Missus [CUSTOMER_NAME]. [CUSTOMER_FULL_NAME].",
+      "startMs": 290060,
+      "endMs": 292560
+    },
+    {
+      "speaker": "agent",
+      "text": "Can you please verify again your first and last name as per ID, please?",
+      "startMs": 297060,
+      "endMs": 299900
+    },
+    {
+      "speaker": "customer",
+      "text": "[CUSTOMER_FULL_NAME].",
+      "startMs": 304400,
+      "endMs": 306900
+    },
+    {
+      "speaker": "agent",
+      "text": "Okay. And then your email address, can you please also verify it? It's [EMAIL]. Thank you. And then your mobile number, can you please also verify it?",
+      "startMs": 311400,
+      "endMs": 317400
+    },
+    {
+      "speaker": "customer",
+      "text": "[PHONE].",
+      "startMs": 321900,
+      "endMs": 324400
+    },
+    {
+      "speaker": "agent",
+      "text": "Okay. And your date of birth?",
+      "startMs": 328900,
+      "endMs": 331400
+    },
+    {
+      "speaker": "customer",
+      "text": "[DOB].",
+      "startMs": 335900,
+      "endMs": 338400
+    },
+    {
+      "speaker": "agent",
+      "text": "And you are currently with I Primus. Right?",
+      "startMs": 342900,
+      "endMs": 345400
+    },
+    {
+      "speaker": "customer",
+      "text": "That's correct. Yes.",
+      "startMs": 349900,
+      "endMs": 352400
+    },
+    {
+      "speaker": "agent",
+      "text": "Are you able to pull up your I Primus bill or no?",
+      "startMs": 356900,
+      "endMs": 359400
+    },
+    {
+      "speaker": "customer",
+      "text": "Yep. Got [ACCOUNT_NUMBER].",
+      "startMs": 363900,
+      "endMs": 366400
+    },
+    {
+      "speaker": "agent",
+      "text": "The connection address will be [SERVICE_ADDRESS]. Correct? And how soon do you want your connection to be at the address?",
+      "startMs": 370900,
+      "endMs": 375740
+    },
+    {
+      "speaker": "customer",
+      "text": "As soon as possible.",
+      "startMs": 380240,
+      "endMs": 382740
+    },
+    {
+      "speaker": "agent",
+      "text": "And do you want your modem to be delivered at the same address, or do you want a different address?",
+      "startMs": 387240,
+      "endMs": 391200
+    },
+    {
+      "speaker": "customer",
+      "text": "Just with the delivery of the modem, the [STREET_NAME] entrance is closed at the moment. So they will have to come to [DELIVERY_ADDRESS]. There's two entrances.",
+      "startMs": 395700,
+      "endMs": 402100
+    },
+    {
+      "speaker": "agent",
+      "text": "I see. Okay. It's already noted. To set up your account, we need to collect your preferred payment method. Are you using a credit card or debit card? But before that, I need to mute the recording. K? Okay. The recording is already resumed.",
+      "startMs": 406600,
+      "endMs": 416160
+    },
+    {
+      "speaker": "agent",
+      "text": "Can you please look for the Netcom CF forty Wi Fi six modem? Make sure that you selected it. You will see the total minimum cost of three hundred seventeen dollars. You don't have to worry about the new development fee of two hundred seventy five dollars because your address is already NBN ready.",
+      "startMs": 420660,
+      "endMs": 432540
+    },
+    {
+      "speaker": "customer",
+      "text": "Yep. I've selected that.",
+      "startMs": 437040,
+      "endMs": 439540
+    },
+    {
+      "speaker": "customer",
+      "text": "It's [DELIVERY_ADDRESS].",
+      "startMs": 444040,
+      "endMs": 446540
+    },
+    {
+      "speaker": "agent",
+      "text": "Okay. Can you please select no and then select the exact address.",
+      "startMs": 451040,
+      "endMs": 453640
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay. So a text message, [OTP_CODE].",
+      "startMs": 458140,
+      "endMs": 460640
+    },
+    {
+      "speaker": "agent",
+      "text": "And then click submit application. Just let me know if you already have the reference number.",
+      "startMs": 465140,
+      "endMs": 468860
+    },
+    {
+      "speaker": "customer",
+      "text": "Yep. [REFERENCE_NUMBER].",
+      "startMs": 473360,
+      "endMs": 475860
+    },
+    {
+      "speaker": "agent",
+      "text": "Thank you for that. That means that you already take advantage of the offer. Congratulations for choosing [PROVIDER_A]. You need to wait for the delivery of the modem. It will be three to five business days.",
+      "startMs": 480360,
+      "endMs": 488640
+    },
+    {
+      "speaker": "agent",
+      "text": "Again, thank you also, [CUSTOMER_NAME]. This is [AGENT_NAME] again from Equinix Comparison. It was a pleasure to help you out. Cheers, and have a wonderful day.",
+      "startMs": 493140,
+      "endMs": 499540
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay. Thank you.",
+      "startMs": 504040,
+      "endMs": 506540
+    },
+    {
+      "speaker": "agent",
+      "text": "You're welcome. Bye for now. Bye.",
+      "startMs": 511040,
+      "endMs": 513540
+    }
+  ]
+}

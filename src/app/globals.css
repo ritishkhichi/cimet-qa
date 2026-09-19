@@ -48,7 +48,32 @@ body {
   .text-warn {
     color: var(--warn);
   }
+  .bg-warn\/20 {
+    background-color: color-mix(in srgb, var(--warn) 20%, transparent);
+  }
   .bg-line {
     background-color: var(--line);
+  }
+  .bg-pass\/20 {
+    background-color: color-mix(in srgb, var(--pass) 20%, transparent);
+  }
+  .bg-fail\/20 {
+    background-color: color-mix(in srgb, var(--fail) 20%, transparent);
+  }
+  .bg-accent\/20 {
+    background-color: color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+  .ring-accent-focus:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+}
+
+@layer components {
+  .badge-pill {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .panel-card {
+    @apply rounded-xl border border-line bg-panel;
   }
 }
