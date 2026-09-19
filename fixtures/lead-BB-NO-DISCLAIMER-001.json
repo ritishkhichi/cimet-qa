@@ -1,0 +1,21 @@
+{
+  "externalLeadId": "BB-NO-DISCLAIMER-001",
+  "retailerId": "provider_a",
+  "agentId": "agent_nodisc",
+  "callAt": "2026-03-14T04:00:00.000Z",
+  "crmFields": {
+    "email": "customer.demo@example.com",
+    "phone": "0412 555 018",
+    "planPromoPrice": 42.9,
+    "planRegularPrice": 72.9,
+    "downloadMbps": 25,
+    "uploadMbps": 8.5,
+    "modemModel": "Netcom CF40 Wi-Fi 6",
+    "currentProvider": "iPRIMUS",
+    "providerSold": "Provider A Broadband",
+    "serviceAddress": "14 Demo Street, Suburb NSW 2000",
+    "deliveryAddress": "Unit 2, 14 Demo Street, Suburb NSW 2000",
+    "nbnReady": true,
+    "campaign": "Broadband Compare - VIC"
+  }
+}

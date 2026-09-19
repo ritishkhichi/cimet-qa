@@ -11,12 +11,52 @@ enum LeadStatus {
   PENDING
   TRANSCRIBING
   TRANSCRIBED
+  SCORING
+  SUBMITTED
+  HELD
+  CANCELLED
   FAILED
 }
 
 enum TranscriptSource {
   DEEPGRAM
   UPLOAD
+}
+
+enum UserRole {
+  ADMIN
+  TL
+  QA
+}
+
+enum CheckType {
+  A_VERBATIM
+  B_FACTUAL
+  C_BEHAVIOUR
+}
+
+enum ScoreStatus {
+  PASS
+  FAIL
+  NOTE
+  LOW_CONFIDENCE
+}
+
+enum GateStatus {
+  SUBMITTED
+  HELD
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         UserRole @default(TL)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  overrides Override[]
 }
 
 model Lead {
@@ -32,6 +72,7 @@ model Lead {
 
   recordings Recording[]
   transcript Transcript?
+  scoreRuns  ScoreRun[]
 
   @@index([status])
 }
@@ -59,4 +100,97 @@ model Transcript {
   cardDataDetected Boolean          @default(false)
   createdAt        DateTime         @default(now())
   updatedAt        DateTime         @updatedAt
+}
+
+model CheckVersion {
+  id            String    @id @default(cuid())
+  retailerId    String
+  label         String
+  effectiveFrom DateTime
+  effectiveTo   DateTime?
+  createdAt     DateTime  @default(now())
+
+  checks    CheckDefinition[]
+  scoreRuns ScoreRun[]
+
+  @@index([retailerId, effectiveFrom])
+}
+
+model CheckDefinition {
+  id          String    @id @default(cuid())
+  versionId   String
+  version     CheckVersion @relation(fields: [versionId], references: [id], onDelete: Cascade)
+  code        String
+  type        CheckType
+  title       String
+  instruction String
+  critical    Boolean   @default(false)
+  weight      Float     @default(1)
+  config      Json?
+
+  results ScoreResult[]
+
+  @@unique([versionId, code])
+}
+
+model ScoreRun {
+  id             String     @id @default(cuid())
+  leadId         String
+  lead           Lead       @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  checkVersionId String
+  checkVersion   CheckVersion @relation(fields: [checkVersionId], references: [id])
+  gateStatus     GateStatus
+  startedAt      DateTime   @default(now())
+  finishedAt     DateTime?
+
+  results ScoreResult[]
+
+  @@index([leadId, startedAt])
+}
+
+model ScoreResult {
+  id                String      @id @default(cuid())
+  scoreRunId        String
+  scoreRun          ScoreRun    @relation(fields: [scoreRunId], references: [id], onDelete: Cascade)
+  checkDefinitionId String
+  checkDefinition   CheckDefinition @relation(fields: [checkDefinitionId], references: [id])
+  status            ScoreStatus
+  confidence        Float
+  evidenceText      String?
+  startMs           Int?
+  endMs             Int?
+  reasoning         String
+  effectiveStatus   ScoreStatus
+
+  overrides Override[]
+
+  @@index([scoreRunId])
+}
+
+model Override {
+  id               String      @id @default(cuid())
+  scoreResultId    String
+  scoreResult      ScoreResult @relation(fields: [scoreResultId], references: [id], onDelete: Cascade)
+  originalStatus   ScoreStatus
+  newStatus        ScoreStatus
+  reason           String
+  overridingUserId String
+  overridingUser   User        @relation(fields: [overridingUserId], references: [id])
+  createdAt        DateTime    @default(now())
+
+  @@index([scoreResultId])
+}
+
+/// Processing / email audit trail for Analytics + automation
+model ActivityLog {
+  id        String   @id @default(cuid())
+  type      String
+  leadId    String?
+  message   String
+  meta      Json?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([type])
+  @@index([leadId])
 }
