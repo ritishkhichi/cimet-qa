@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum LeadStatus {
+  PENDING
+  TRANSCRIBING
+  TRANSCRIBED
+  FAILED
+}
+
+enum TranscriptSource {
+  DEEPGRAM
+  UPLOAD
+}
+
+model Lead {
+  id             String     @id @default(cuid())
+  externalLeadId String     @unique
+  retailerId     String
+  agentId        String
+  callAt         DateTime
+  status         LeadStatus @default(PENDING)
+  crmFields      Json
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+
+  recordings Recording[]
+  transcript Transcript?
+
+  @@index([status])
+}
+
+model Recording {
+  id         String   @id @default(cuid())
+  leadId     String
+  lead       Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  filePath   String
+  mimeType   String?
+  durationMs Int?
+  createdAt  DateTime @default(now())
+
+  @@index([leadId])
+}
+
+model Transcript {
+  id               String           @id @default(cuid())
+  leadId           String           @unique
+  lead             Lead             @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  source           TranscriptSource
+  utterances       Json
+  words            Json?
+  redactedText     String
+  cardDataDetected Boolean          @default(false)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+}

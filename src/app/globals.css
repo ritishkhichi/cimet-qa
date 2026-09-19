@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f1419;
+  --panel: #1a222c;
+  --line: #2c3848;
+  --text: #e8eef4;
+  --muted: #8b9aab;
+  --accent: #3d9cf0;
+  --pass: #3ecf8e;
+  --fail: #f07178;
+  --warn: #e6b35a;
+}
+
+body {
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%, #1a3050 0%, var(--bg) 55%);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .bg-panel {
+    background-color: var(--panel);
+  }
+  .border-line {
+    border-color: var(--line);
+  }
+  .text-muted {
+    color: var(--muted);
+  }
+  .text-text {
+    color: var(--text);
+  }
+  .text-accent {
+    color: var(--accent);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .text-pass {
+    color: var(--pass);
+  }
+  .text-fail {
+    color: var(--fail);
+  }
+  .text-warn {
+    color: var(--warn);
+  }
+  .bg-line {
+    background-color: var(--line);
+  }
+}

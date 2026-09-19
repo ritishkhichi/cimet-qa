@@ -1,0 +1,20 @@
+{
+  "externalLeadId": "BB-SAMPLE-001",
+  "retailerId": "provider_a",
+  "agentId": "agent_sample",
+  "callAt": "2026-03-15T04:00:00.000Z",
+  "crmFields": {
+    "email": "[EMAIL]",
+    "phone": "[PHONE]",
+    "planPromoPrice": 42.9,
+    "planRegularPrice": 72.9,
+    "downloadMbps": 25,
+    "uploadMbps": 8.5,
+    "modemModel": "Netcom CF40 Wi-Fi 6",
+    "currentProvider": "iPRIMUS",
+    "providerSold": "[PROVIDER_A]",
+    "serviceAddress": "[SERVICE_ADDRESS]",
+    "deliveryAddress": "[DELIVERY_ADDRESS]",
+    "nbnReady": true
+  }
+}
